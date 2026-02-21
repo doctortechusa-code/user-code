@@ -4,8 +4,8 @@ import wixSeoFrontend from 'wix-seo-frontend';
 
 $w.onReady(function () {
     // ——— SEO Home ———
-    const title = "Irias Iron Works: MA's Elite Ironwork Contractor | Railings, Staircases, Gates";
-    const description = "Precision metal railings, staircases, security gates & fire escapes in Massachusetts. Certified contractor. Custom fabrication & installation. Free estimate.";
+    const title = "Irias Iron Works | Metal Railings & Ironwork | Boston & Massachusetts";
+    const description = "Metal railings, staircases, gates & fire escapes in Boston and Massachusetts. Certified contractor. Custom fabrication. Free estimate.";
     const url = "https://iriasironworks.com";
 
     wixSeoFrontend.setTitle(title);
@@ -23,9 +23,9 @@ $w.onReady(function () {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "Irias Iron Works Services Inc",
-            "description": "Custom metal railings, architectural staircases, security gates, fences, and fire escape services in Massachusetts.",
+            "description": "Custom metal railings, staircases, gates, fences and fire escapes in Boston and Massachusetts.",
             "url": url,
-            "areaServed": { "@type": "State", "name": "Massachusetts" },
+            "areaServed": [{ "@type": "City", "name": "Boston" }, { "@type": "State", "name": "Massachusetts" }],
             "priceRange": "$$",
             "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "08:00", "closes": "17:00" }
         }
