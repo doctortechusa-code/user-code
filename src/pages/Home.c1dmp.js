@@ -3,7 +3,6 @@
 import wixSeoFrontend from 'wix-seo-frontend';
 
 $w.onReady(function () {
-    // ——— SEO Home ———
     const title = "Irias Iron Works | Metal Railings & Ironwork | Boston & Massachusetts";
     const description = "Metal railings, staircases, gates & fire escapes in Boston and Massachusetts. Certified contractor. Custom fabrication. Free estimate.";
     const url = "https://iriasironworks.com";
@@ -17,7 +16,6 @@ $w.onReady(function () {
         { property: "og:type", content: "website" }
     ]);
 
-    // Datos estructurados (LocalBusiness) para Google
     const structuredData = [
         {
             "@context": "https://schema.org",
@@ -32,6 +30,5 @@ $w.onReady(function () {
     ];
     wixSeoFrontend.setStructuredData(structuredData);
 
-    // Chat: se muestra según la configuración del elemento en el editor
     $w('#wixChat1').onViewportEnter(() => {});
 });
