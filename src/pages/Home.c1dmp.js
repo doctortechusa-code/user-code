@@ -1,16 +1,34 @@
 // API Reference: https://www.wix.com/velo/reference/api-overview/introduction
-// “Hello, World!” Example: https://learn-code.wix.com/en/article/hello-world
+
+import wixSeoFrontend from 'wix-seo-frontend';
 
 $w.onReady(function () {
-    // Write your JavaScript here
+    const title = "Irias Iron Works: MA's Elite Ironwork Contractor | Railings, Staircases, Gates";
+    const description = "Precision metal railings, staircases, security gates & fire escapes in Massachusetts. Certified contractor. Custom fabrication & installation. Free estimate.";
+    const url = "https://iriasironworks.com";
 
-    // To select an element by ID use: $w('#elementID')
+    wixSeoFrontend.setTitle(title);
+    wixSeoFrontend.setMetaTags([
+        { name: "description", content: description },
+        { property: "og:title", content: title },
+        { property: "og:description", content: description },
+        { property: "og:url", content: url },
+        { property: "og:type", content: "website" }
+    ]);
 
-    // Click 'Preview' to run your code
+    const structuredData = [
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Irias Iron Works Services Inc",
+            "description": "Custom metal railings, architectural staircases, security gates, fences, and fire escape services in Massachusetts.",
+            "url": url,
+            "areaServed": { "@type": "State", "name": "Massachusetts" },
+            "priceRange": "$$",
+            "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "08:00", "closes": "17:00" }
+        }
+    ];
+    wixSeoFrontend.setStructuredData(structuredData);
 
-    $w('#wixChat1').onViewportEnter(() => {
-        // There is no documented method to programmatically open the Wix Chatbox via Velo code.
-        // The chatbox will appear according to its own settings and triggers.
-        // This handler is included in case future APIs allow programmatic control.
-    });
+    $w('#wixChat1').onViewportEnter(() => {});
 });
