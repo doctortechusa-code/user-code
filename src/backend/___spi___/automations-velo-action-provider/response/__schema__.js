@@ -1,0 +1,2 @@
+export interface Payload {
+    payload: { 'pageId': string; 'pageName': string; 'visitorId': string; 'wix_automations-llm_call-4': { 'responseText': string; }; 'setVariable': { '9ff7669c-5eee-48b2-9999-109fae73bd43': string; }; }}
